@@ -1,71 +1,65 @@
-Title
+Домашние задания по теме Git
 ===
-Abstract:xxx
-## Papar Information
-- Title:  `paper name`
-- Authors:  `A`,`B`,`C`
-- Preprint: [https://arxiv.org/abs/xx]()
-- Full-preprint: [paper position]()
-- Video: [video position]()
+## Общее описание
+Данный репозиторий содержит результаты выполнения заданий по теме системы управления версиями Git.
+## Информация о курсе
+- **Наименование курса:**  `Devops`
+- **Раздел курса:**  `[DevOps - 1] - Basic. Git`
+- **Ссылка на задания курса:** [https://lk.rebrainme.com/devops?page=tasks](https://lk.rebrainme.com/devops?page=tasks)
+- **Ссылка на репозиторий:** [https://gitlab.rebrainme.com/devops_users_repos/3545/rebrain-devops-task1](https://gitlab.rebrainme.com/devops_users_repos/3545/rebrain-devops-task1)
+- **ФИО студента:** `Валерий Д`
 
-## Install & Dependence
-- python
-- pytorch
-- numpy
-
-## Dataset Preparation
-| Dataset | Download |
-| ---     | ---   |
-| dataset-A | [download]() |
-| dataset-B | [download]() |
-| dataset-C | [download]() |
-
-## Use
-- for train
-  ```
-  python train.py
-  ```
-- for test
-  ```
-  python test.py
-  ```
-## Pretrained model
-| Model | Download |
-| ---     | ---   |
-| Model-1 | [download]() |
-| Model-2 | [download]() |
-| Model-3 | [download]() |
+## Список файлов в репозитории
+1. **nginx.conf** - файл конфигурации сервера Nginx с настройками "по умолчанию";
+2. **README.md** - файл с описанием проекта.
 
 
-## Directory Hierarchy
+## Описание типов файлов
+| файл | тип | ссылка |
+| ---     | --- | ---   |
+| nginx.conf | текст | [download](https://gitlab.rebrainme.com/devops_users_repos/3545/rebrain-devops-task1/-/blob/master/nginx.conf) |
+| README.md | текст | [download](https://gitlab.rebrainme.com/devops_users_repos/3545/rebrain-devops-task1/-/blob/master/README.md) |
+
+
+## Структура содержимого репозитория
 ```
-|—— nginx.conf
+|—— 
+   |—— nginx.conf
+   |—— README.md
 ```
-## Code Details
-### Tested Platform
-- software
+## Содержимое конфигурационных файлов
+### Файл nginx.conf
   ```
-  OS: Debian unstable (May 2021), Ubuntu LTS
-  Python: 3.8.5 (anaconda)
-  PyTorch: 1.7.1, 1.8.1
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
   ```
-- hardware
-  ```
-  CPU: Intel Xeon 6226R
-  GPU: Nvidia RTX3090 (24GB)
-  ```
-### Hyper parameters
-```
-```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
+
+<a href="http://linkedin.com/in/valeryd" target="_blank"><img src="https://www.askdavetaylor.com/ezoimgfmt/static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" alt="Профиль студента на LinkedIn" style="height: auto !important;width: auto !important;" ></a>
   
-## License
+## Лицензия
+>Посмотреть лицензионное соглашение можно [здесь](https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
 
-## Citing
-If you use xxx,please use the following BibTeX entry.
-```
-```
+Распространяется под лицензией **MIT**.
+
+
